@@ -1,0 +1,25 @@
+#+TITLE: Org-mode Internationalization (i18n) for HTML export
+
+Simple module to switch between languages in an org-mode HTML export.
+
+* How to use
+
+  1. Import *org-i18n* into your .org file by adding the following line in the header:
+
+  #+begin_src org
+    ,#+setupfile: https://b-coimbra.github.io/org-i18n/org-i18n.setup
+  #+end_src
+
+  2. Apply a =lang= [[https://orgmode.org/manual/Tags.html][tag]] in the headline to specify which language the HTML document should show:
+
+  #+begin_src org
+    ,* Headline in English :lang:en:
+
+      Some text in english.
+
+    ,* Título em Português :lang:pt:
+
+      Algum texto em português.
+  #+end_src
+
+  3. Specify the language to be displayed in the URL params (defaults to "en"): =https://website.com?lang=pt=
